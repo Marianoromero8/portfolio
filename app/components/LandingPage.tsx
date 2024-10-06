@@ -8,10 +8,11 @@ export default function Landing() {
       <div className='md:w-1/2 md:pr-10 content-start'>
         <h1 className={`text-6xl `}>Romero Mariano</h1>
         <br />
-        <h2 className={`text-3xl`}>Im Full Stack Developer</h2>
+        <h2 className={`text-3xl`}>I'm Full Stack Developer</h2>
         <br />
         <p>Welcome to my digital portfolio where you can find
-          creativity on code. As a web developer, my work is
+          creativity on code.
+          As a web developer, my work is
           to turn ideas into captivating digital experiences.
           You can explore my portfolio to see how i work. </p>
       </div>

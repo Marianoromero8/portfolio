@@ -13,9 +13,9 @@ export default function AboutMe() {
                 I am also studying for a University Degree in Programming at the National Technological University (UTN). This is helping me learn more about other languages like           C++ and Python.
                 <br />
                 <br />
-                I am very passionate about creating innovative solutions that improve user experiences and solve real-life problems. I see myself as a curious, proactive, and collaborative person, always looking for new ways to learn and add value to the projects I work on
+                I am very passionate about creating innovative solutions that improve user experiences and solve real-life problems. I see myself as a curious, proactive, and collaborative person, always looking for new ways to learn and add value to the projects I work on.
                 <br />
-                In addition to my technical skills, I believe that effective communication, teamwork, and adaptability are crucial in any project. I work to create a positive and teamwork-friendly environment because I believe it is important for getting good results
+                In addition to my technical skills, I believe that effective communication, teamwork, and adaptability are crucial in any project. I work to create a positive and teamwork-friendly environment because I believe it is important for getting good results.
             </p>
         </div>
     )
