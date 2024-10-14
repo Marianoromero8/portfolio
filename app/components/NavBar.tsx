@@ -15,8 +15,8 @@ export default function NavBar() {
   return (
     <div className={`text-[#0094c6] flex w-full justify-around p-2 border-b border-[#0094c6]`}>
       <Button variant='dark' onClick={() => scrollToSection('aboutme')}>About Me</Button>
-      <Button variant='dark' >Skills</Button>
-      <Button variant='dark'>Projects</Button>
+      <Button variant='dark'>Skills</Button>
+      <Button variant='dark' onClick={() => scrollToSection('projects')}>Projects</Button>
       <Button variant='dark'>Contacts</Button>
     </div>
   )

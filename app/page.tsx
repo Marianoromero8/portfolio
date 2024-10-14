@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Landing from "./components/LandingPage";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
+import ProjectsSection from "./components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <NavBar />
       <Landing />
       <AboutMe />
+      <ProjectsSection />
     </main>
   );
 }

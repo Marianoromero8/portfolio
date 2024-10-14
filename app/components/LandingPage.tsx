@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import foto from "../img/DALL·E 2024-10-05 22.16.01 - A hand-drawn style illustration of a person programming on a laptop. The scene should include a cozy workspace with a desk, books, and plants. The per.webp"
+import foto from "../../public/DALL·E 2024-10-05 22.16.01 - A hand-drawn style illustration of a person programming on a laptop. The scene should include a cozy workspace with a desk, books, and plants. The per.webp"
 
 export default function Landing() {
   return (
