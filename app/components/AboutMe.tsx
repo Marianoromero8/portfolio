@@ -5,7 +5,7 @@ export default function AboutMe() {
         <div id='aboutme' className={'flex flex-col text-[#0094C6] mt-20 h-screen'}>
             <h2 className={'text-5xl text-center mb-8'}>About Me</h2>
             <p className={'text-left pl-10 pr-10 pb-10'}>
-                I have experience with JavaScript, C++, React, CSS, Node.js, and PostgreSQL. I did a bootcamp call Soy Henry that equips students with practical skills to build dynamic, scalable, and secure web applications using industry best practices and tools.
+                I have experience with JavaScript, C++, React, CSS, Node.js, and PostgreSQL. I did a bootcamp called Soy Henry that equips students with practical skills to build dynamic, scalable, and secure web applications using industry best practices and tools.
                 <br />
                 <br />
                 Right now, I am working on a personal project, an app that helps users manage their expenses easily. For this project, I am using Node.js and PostgreSQL for the backend, and I am using Next.js, TypeScript, and Tailwind CSS for the frontend.
