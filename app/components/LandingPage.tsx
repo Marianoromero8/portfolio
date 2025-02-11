@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import foto from "../../public/DALL·E 2024-10-05 22.16.01 - A hand-drawn style illustration of a person programming on a laptop. The scene should include a cozy workspace with a desk, books, and plants. The per.webp"
+
 
 export default function Landing() {
   return (
-    <div className={`flex flex-col md:flex-row text-[#0094C6] p-10 h-screen`}>
+    <div className={`flex flex-col md:flex-row text-[#0094C6] p-10 h-screen transition-all duration-1000 ease-in-out hover:flex-row-reverse hover:scale-104`}>
       <div className='md:w-1/2 md:pr-10 content-start'>
         <h1 className={`text-6xl `}>Romero Mariano</h1>
         <br />
@@ -17,7 +17,7 @@ export default function Landing() {
           You can explore my portfolio to see how i work. </p>
       </div>
       <div className={'mt-10 md:mt-0 md:w-1/2 flex justify-center'} >
-        <Image src={foto} alt='Foto-Mia' width={300} height={300} className={"object-cover w-full h-auto"} />
+        <Image src='/Foto.jpeg' alt='Foto-Mia' width={300} height={300} className={"object-cover w-full h-auto rounded-full"} />
       </div>
     </div>
   )
