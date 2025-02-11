@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from 'react';
+import { FaGlobe } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa6';
 
 interface ProjectCardProps {
     title: string;
@@ -17,9 +19,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl,
                 <div className='flex flex-col'>
                     <h3 className="text-xl font-bold">{title}</h3>
                     <p className="text-gray-700 flex-grow min-h-[100px]">{description}</p>
-                    <div className='flex flex-col gap-4'>
-                        <a href={projectLink} className="text-blue-500 hover:underline" target='_blank'>View Project</a>
-                        <a href={codeLink} className="text-blue-500 hover:underline" target='_blank'>View Code</a>
+                    <div className='flex flex-row gap-4 pt-4'>
+                        <a href={projectLink} className="" target='_blank'><FaGlobe /></a>
+                        <a href={codeLink} className="" target='_blank'><FaGithub /></a>
                     </div>
                 </div>
             </div>

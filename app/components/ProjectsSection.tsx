@@ -4,7 +4,7 @@ import ProjectCard from '../common/ProjectCard'
 const ProjectsSection: React.FC = () => {
     return (
         <section id="projects" className={'flex flex-col items-center text-[#0094C6] pb-16'}>
-            <h2 className={'text-5xl text-center mb-8'}>My Projects</h2>
+            <h2 className='text-5xl text-center mb-8'>Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 h-full w-full px-4">
                 <ProjectCard
                     title="ChampionGear"
