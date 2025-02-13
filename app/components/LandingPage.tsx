@@ -12,7 +12,7 @@ export default function Landing() {
       <div className='md:w-1/2 md:pr-10 content-center'>
         <h1 className='text-6xl'>Romero Mariano</h1>
         <br />
-        <h2 className='text-3xl'>I'm Full Stack Developer</h2>
+        <h2 className='text-3xl'>Front End Developer</h2>
         <br />
         <p>Welcome to my digital portfolio where you can find
           creativity on code.
@@ -27,7 +27,7 @@ export default function Landing() {
 
           <Button
             variant='dark'
-            className='flex items-center gap-2 mt-2 px-4 py-2 relative overflow-hidden'
+            className='flex items-center gap-2 mt-4 px-4 py-2 relative overflow-hidden'
             onClick={() => window.location.href = "mailto:marianoromero97.mr@gmail.com"}>
             Hire me
             <motion.span

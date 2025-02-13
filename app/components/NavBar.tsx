@@ -11,7 +11,7 @@ export default function NavBar() {
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prevState) =>
-        prevState === "Mariano Romero" ? "Frontend Developer" : "Mariano Romero"
+        prevState === "Mariano Romero" ? "Front End Developer" : "Mariano Romero"
       );
     }, 4000);
 
@@ -34,7 +34,7 @@ export default function NavBar() {
       </div>
       <div className='flex flex-row ml-3 pl-2 gap-40'>
         <Button variant='dark' onClick={() => scrollToSection('aboutme')}>About Me</Button>
-        <Button variant='dark'>Skills</Button>
+        <Button variant='dark' onClick={() => scrollToSection('skills')}>Skills</Button>
         <Button variant='dark' onClick={() => scrollToSection('projects')}>Projects</Button>
         <Button variant='dark'>Contacts</Button>
       </div>

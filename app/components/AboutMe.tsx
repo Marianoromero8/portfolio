@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function AboutMe() {
     return (
-        <div id='aboutme' className={'flex flex-col text-[#0094C6] mt-20 h-screen'}>
-            <h2 className={'text-5xl text-center mb-8'}>About Me</h2>
-            <p className={'text-left pl-10 pr-10 pb-10'}>
+        <div id='aboutme' className='flex flex-col text-[#0094C6] mt-20 h-screen'>
+            <h2 className='text-5xl text-center mb-8'>About Me</h2>
+            <p className='text-left pl-10 pr-10'>
                 I have experience with JavaScript, C++, React, CSS, Node.js, and PostgreSQL. I did a bootcamp called Soy Henry that equips students with practical skills to build dynamic, scalable, and secure web applications using industry best practices and tools.
                 <br />
                 <br />
