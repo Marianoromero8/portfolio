@@ -18,8 +18,10 @@ export default function Footer() {
                         <FaEnvelope className="text-2xl hover:text-gray-600 transition-colors" />
                     </a>
                 </div>
-                <div className="text-sm">
-                    <a href="/CV-Romero Mariano-Desarrollador Frontend.pdf" download="Resume - Mariano Romero" className="hover:underline">Ver CV</a>
+                <div className="text-sm flex flex-row gap-2">
+                    <a href="/CV-Romero Mariano-Desarrollador Frontend.pdf" download="CV - Mariano Romero" className="hover:underline">CV</a>
+                    <p>-</p>
+                    <a href="/CV-Romero Mariano-Frontend Developer.pdf" download="Resume - Mariano Romero" className="hover:underline">Resume</a>
                 </div>
             </div>
         </footer>

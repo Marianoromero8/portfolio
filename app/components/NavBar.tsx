@@ -52,8 +52,8 @@ export default function NavBar() {
         <Separator orientation='vertical' className='bg-[#0094c6]' />
       </div>
       <div className='flex items-center gap-5 pl-20'>
-        <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target='_blank' className='text-2xl'><FaLinkedin /></a>
         <a href="https://github.com/Marianoromero8" target='_blank' className='text-2xl' ><FaGithub /></a>
+        <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target='_blank' className='text-2xl'><FaLinkedin /></a>
         <select onChange={handleDownload} className="px-3 py-2 rounded text-lg bg-transparent backdrop-blur-lg z-50 outline: transparent">
           <option value="" hidden>
             📥 Resume Download
