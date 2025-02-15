@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import Button from '../common/Button'
-import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Separator } from '@/components/ui/separator';
 
 
 export default function NavBar() {
@@ -27,22 +28,43 @@ export default function NavBar() {
     }
   }
 
+  const handleDownload = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = event.target.value;
+    if (selectedValue) {
+      window.open(selectedValue, "_blank");
+    }
+  };
+
   return (
-    <div className='text-[#0094c6] flex w-full p-2 border-b border-[#0094c6]'>
-      <div className='flex justify-center w-48 p-2 font-semibold text-[#0094c6] border-r border-[#0094c6]'>
+    <div className='fixed text-[#0094c6] flex w-full p-2 border-b border-[#0094c6] backdrop-blur-lg z-50'>
+      <div className='flex justify-center w-48 p-2 font-semibold text-[#0094c6]'>
         {text}
       </div>
-      <div className='flex flex-row ml-3 pl-2 gap-40'>
-        <Button variant='dark' onClick={() => scrollToSection('aboutme')}>About Me</Button>
-        <Button variant='dark' onClick={() => scrollToSection('skills')}>Skills</Button>
-        <Button variant='dark' onClick={() => scrollToSection('projects')}>Projects</Button>
-        <Button variant='dark'>Contacts</Button>
+      <div className='flex flex-row ml-3 pl-2 gap-14'>
+        <Separator orientation='vertical' className='bg-[#0094c6]' />
+        <Button variant='basic' onClick={() => scrollToSection('aboutme')} className='focus:underline'>About Me</Button>
+        <Separator orientation='vertical' className='bg-[#0094c6]' />
+        <Button variant='basic' onClick={() => scrollToSection('skills')} className='focus:underline'>Skills</Button>
+        <Separator orientation='vertical' className='bg-[#0094c6]' />
+        <Button variant='basic' onClick={() => scrollToSection('projects')} className='focus:underline'>Projects</Button>
+        <Separator orientation='vertical' className='bg-[#0094c6]' />
+        <Button variant='basic' className='focus:underline'>Contacts</Button>
+        <Separator orientation='vertical' className='bg-[#0094c6]' />
       </div>
-      <div className='flex items-center gap-5 pl-36'>
+      <div className='flex items-center gap-5 pl-20'>
         <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target='_blank' className='text-2xl'><FaLinkedin /></a>
         <a href="https://github.com/Marianoromero8" target='_blank' className='text-2xl' ><FaGithub /></a>
-        <a href="/CV-Romero Mariano-Desarrollador Frontend.pdf" download="Romero Mariano-CV" target='_blank' className='text-2xl'><FaDownload /></a>
-        <a href="/CV-Romero Mariano-Frontend Developer.pdf" download="Romero Mariano-Resume" target='_blank' className='text-2xl'><FaDownload /></a>
+        <select onChange={handleDownload} className="px-3 py-2 rounded text-lg bg-transparent backdrop-blur-lg z-50 outline: transparent">
+          <option value="" hidden>
+            📥 Resume Download
+          </option>
+          <option value="/CV-Romero Mariano-Desarrollador Frontend.pdf" className='bg-[#000022] backdrop-blur-lg z-50'>
+            📄Cv - Español
+          </option>
+          <option value="/CV-Romero Mariano-Frontend Developer.pdf" className='bg-[#000022] backdrop-blur-lg z-50'>
+            📄Resume - English
+          </option>
+        </select>
       </div>
     </div>
   )

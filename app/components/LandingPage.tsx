@@ -40,8 +40,8 @@ export default function Landing() {
           </Button>
         </div>
       </div>
-      <div className='mt-10 md:mt-0 md:w-1/2 flex justify-center' >
-        <Image src='/Foto.jpeg' alt='Foto-Mia' width={300} height={300} className={"object-cover w-auto h-auto rounded-full"} />
+      <div className='mt-10 md:mt-0 md:w-1/2 flex justify-center  pt-8' >
+        <Image src='/Foto.jpeg' alt='Foto-Mia' width={300} height={300} className="object-contain w-[550px] h-auto rounded-full" />
       </div>
     </div>
 

@@ -4,6 +4,7 @@ import { RiNextjsLine } from "react-icons/ri";
 import { SiJavascript, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { Progress } from "@/components/ui/progress"
 import { CgCPlusPlus } from "react-icons/cg";
+import { Separator } from "@/components/ui/separator";
 
 
 const skills = [
@@ -20,9 +21,17 @@ const skills = [
 
 export default function Skills() {
     return (
-        <div className="flex flex-col mb-10">
-            <div id="skills" className="text-[#0094C6]">
-                <h2 id="skills" className='text-[#0094C6] text-5xl text-center mb-4'>Skills</h2>
+        <div className="flex flex-row-reverse gap-14 mb-40 ml-3">
+            <div id="skills" className="text-[#0094C6] flex flex-col justify-center gap-4 scroll-mt-16">
+                <h2 className='text-5xl text-center'>S</h2>
+                <h2 className='text-5xl text-center'>k</h2>
+                <h2 className='text-5xl text-center'>i</h2>
+                <h2 className='text-5xl text-center'>l</h2>
+                <h2 className='text-5xl text-center'>l</h2>
+                <h2 className='text-5xl text-center'>s</h2>
+            </div>
+            <div>
+                <Separator orientation="vertical" className="bg-[#0094C6]" />
             </div>
             <div className="grid grid-cols-3 md:grid-cols-3 justify-center text-3xl text-[#0094C6] gap-28 p-5">
                 {skills.map((sk) => (
