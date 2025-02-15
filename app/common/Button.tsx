@@ -10,7 +10,7 @@ interface ButtonProps {
 
 export default function Button({ children, variant, className, disabled, onClick }: ButtonProps) {
   const ACTIVE_STYLE = {
-    basic: 'text-[#000022] bg-[#0094C6] border border-[#000022] p-1 hover:bg-[#000022] hover:text-[#0094C6]',
+    basic: 'text-[#0094C6] p-1 ',
     dark: 'border border-[#0094C6] p-1 hover:bg-[#0094C6] hover:text-[#000022] hover:border-[#0094C6]'
   }
 
