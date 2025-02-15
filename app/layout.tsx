@@ -16,6 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+                    (function() {
+                        const theme = localStorage.getItem('theme') || 'light';
+                        if (theme === 'dark') {
+                            document.documentElement.classList.add('dark');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                        }
+                    })();
+                    `
+        }} />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

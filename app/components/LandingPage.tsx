@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Landing() {
   const [hover, setHover] = useState(false)
   return (
-    <div className='flex flex-col md:flex-row text-[#0094C6] p-10 h-screen'>
+    <div id='landing' className='flex flex-col md:flex-row text-[#0094C6] p-10 px-32 h-screen'>
       <div className='md:w-1/2 md:pr-10 content-center'>
         <h1 className='text-6xl'>Romero Mariano</h1>
         <br />
@@ -41,7 +41,7 @@ export default function Landing() {
         </div>
       </div>
       <div className='mt-10 md:mt-0 md:w-1/2 flex justify-center  pt-8' >
-        <Image src='/Foto.jpeg' alt='Foto-Mia' width={300} height={300} className="object-contain w-[550px] h-auto rounded-full" />
+        <Image src='/Foto.jpeg' alt='Foto-Mia' width={300} height={300} priority className="object-contain w-[550px] h-auto rounded-full" />
       </div>
     </div>
 

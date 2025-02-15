@@ -19,7 +19,8 @@
 }
 
 body {
-  background-color: #000022;
+  background-color: rgb(var(--background-start-rgb));
+  /* background-color: #000022; */
   /* background-color: #0094C6; */
 }
 
@@ -59,7 +60,7 @@ body {
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: #000022;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -92,7 +93,7 @@ body {
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#E0CFB9] text-[#000022] dark:bg-[#000022] dark:text-[#0094C6];
   }
 }
 

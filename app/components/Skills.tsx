@@ -22,15 +22,14 @@ const skills = [
 export default function Skills() {
     return (
         <div className="flex flex-row-reverse gap-14 mb-40 ml-3">
-            <div id="skills" className="text-[#0094C6] flex flex-col justify-center gap-4 scroll-mt-16">
-                <h2 className='text-5xl text-center'>S</h2>
-                <h2 className='text-5xl text-center'>k</h2>
-                <h2 className='text-5xl text-center'>i</h2>
-                <h2 className='text-5xl text-center'>l</h2>
-                <h2 className='text-5xl text-center'>l</h2>
-                <h2 className='text-5xl text-center'>s</h2>
+            <div id="skills" className="text-[#0094C6] flex flex-row lg:flex-col justify-center gap-1 lg:gap-4 scroll-mt-16">
+                {'Skills'.split('').map((letter, index) => (
+                    <h2 key={index} className="text-3xl md:text-4xl lg:text-5xl text-center">
+                        {letter}
+                    </h2>
+                ))}
             </div>
-            <div>
+            <div className='hidden lg:block'>
                 <Separator orientation="vertical" className="bg-[#0094C6]" />
             </div>
             <div className="grid grid-cols-3 md:grid-cols-3 justify-center text-3xl text-[#0094C6] gap-28 p-5">
