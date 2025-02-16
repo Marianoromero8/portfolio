@@ -2,21 +2,20 @@ import { DiPostgresql, DiPython } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
 import { SiJavascript, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
-import { Progress } from "@/components/ui/progress"
 import { CgCPlusPlus } from "react-icons/cg";
 import { Separator } from "@/components/ui/separator";
 
 
 const skills = [
-    { id: 1, icon: <SiTypescript className="text-[#3178C6]" />, name: "Typescript", level: 60 },
-    { id: 2, icon: <SiJavascript className="text-[#f7df1e]" />, name: "Javascript", level: 70 },
-    { id: 3, icon: <SiReact />, name: "React.js", level: 70 },
-    { id: 4, icon: <RiNextjsLine className="text-[#ffff]" />, name: "Next.js", level: 60 },
-    { id: 5, icon: <SiTailwindcss className="text-[#06b6d4]" />, name: "Tailwind", level: 60 },
-    { id: 6, icon: <DiPython />, name: "Python", level: 35 },
-    { id: 7, icon: <DiPostgresql />, name: "PostgreSQL", level: 50 },
-    { id: 8, icon: <FaNodeJs className="text-[#3C873A]" />, name: "Node.js", level: 50 },
-    { id: 9, icon: <CgCPlusPlus />, name: "C++", level: 30 },
+    { id: 1, icon: <SiTypescript className="text-[#3178C6]" />, name: "Typescript" },
+    { id: 2, icon: <SiJavascript className="text-[#f7df1e]" />, name: "Javascript" },
+    { id: 3, icon: <SiReact />, name: "React.js" },
+    { id: 4, icon: <RiNextjsLine className="text-[#ffff]" />, name: "Next.js" },
+    { id: 5, icon: <SiTailwindcss className="text-[#06b6d4]" />, name: "Tailwind" },
+    { id: 6, icon: <DiPython />, name: "Python" },
+    { id: 7, icon: <DiPostgresql />, name: "PostgreSQL" },
+    { id: 8, icon: <FaNodeJs className="text-[#3C873A]" />, name: "Node.js" },
+    { id: 9, icon: <CgCPlusPlus />, name: "C++" },
 ];
 
 export default function Skills() {
@@ -41,10 +40,6 @@ export default function Skills() {
                         <h4 className="flex flex-col items-center gap-2">
                             {sk.icon} {sk.name}
                         </h4>
-                        <div className="flex flex-row items-center gap-2 text-sm">
-                            <Progress value={sk.level} className="text-[#0094C6] border border-[#0094C6]" />
-                            <p>{sk.level}%</p>
-                        </div>
                     </div>
                 ))}
             </div>
