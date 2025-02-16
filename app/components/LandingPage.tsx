@@ -10,15 +10,15 @@ export default function Landing() {
   return (
     <div id='landing' className='flex flex-col md:flex-row text-[#0094C6] p-10 px-32 h-screen'>
       <div className='md:w-1/2 md:pr-10 content-center'>
-        <h1 className='text-6xl'>Romero Mariano</h1>
+        <h1 className="text-5xl whitespace-nowrap">
+          Welcome to my digital portfolio
+        </h1>
         <br />
-        <h2 className='text-3xl'>Front End Developer</h2>
-        <br />
-        <p>Welcome to my digital portfolio where you can find
-          creativity on code.
-          As a web developer, my work is
-          to turn ideas into captivating digital experiences.
-          You can explore my portfolio to see how i work. </p>
+        <p>
+          Hi, I’m <b>Romero Mariano</b>, a <b>Frontend Developer</b>. My mission is to turn ideas into captivating digital experiences through clean and efficient code.
+          <br />
+          Explore my portfolio to see how I approach web development, create seamless user interfaces and bring creative solutions to life
+        </p>
         <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
