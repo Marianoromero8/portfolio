@@ -72,11 +72,11 @@ export default function NavBar() {
           <option value="" hidden>
             📥 Download Resume
           </option>
-          <option value="/CV-Romero Mariano-Desarrollador Frontend.pdf" className={`backdrop-blur-lg z-50 ${theme === "dark" ? "bg-[#000022] text-[#0094c6]" : "bg-inherit text-[#0094c6]"
+          <option value="/CV-Romero Mariano-Desarrollador Frontend.pdf" className={`backdrop-blur-lg z-50 ${theme === "dark" ? "bg-[#000022] text-[#0094c6]" : "bg-[#E0CFB9] text-[#0094c6]"
             }`}>
             📄Cv - Español
           </option>
-          <option value="/CV-Romero Mariano-Frontend Developer.pdf" className={`backdrop-blur-lg z-50 ${theme === "dark" ? "bg-[#000022] text-[#0094c6]" : "bg-inherit text-[#0094c6]"
+          <option value="/CV-Romero Mariano-Frontend Developer.pdf" className={`backdrop-blur-lg z-50 ${theme === "dark" ? "bg-[#000022] text-[#0094c6]" : "bg-[#E0CFB9] text-[#0094c6]"
             }`}>
             📄Resume - English
           </option>
