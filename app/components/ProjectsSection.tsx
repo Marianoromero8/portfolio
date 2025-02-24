@@ -42,8 +42,8 @@ const ProjectsSection: React.FC = () => {
                     //     'PostgreSQL database for storing video game information',
                     //     'Search, filter, and sorting functionalities for video games',
                     // ]}
-                    imageUrl="/ApiVideogames.jpeg"  // Ajusta la ruta a tu carpeta de imágenes
-                    projectLink=""
+                    imageUrl="/PI-Videogames.jpeg"  // Ajusta la ruta a tu carpeta de imágenes
+                    projectLink="https://frontend-proyecto-individual.vercel.app/"
                     codeLink="https://github.com/Marianoromero8/Proyecto-Individual-Videogames"  // Cambia este enlace por el repositorio del código
                 />
             </div>
