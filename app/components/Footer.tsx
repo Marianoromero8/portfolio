@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer id="contacts" className="bg-[#0094c6] text-[#000022] py-6 text-center w-full">
+        <footer id="contactme" className="bg-[#0094c6] text-[#000022] py-6 text-center w-full">
             <div className="container mx-auto flex flex-col items-center gap-4">
                 <p className="text-lg font-semibold">© 2025 Mariano Romero</p>
 

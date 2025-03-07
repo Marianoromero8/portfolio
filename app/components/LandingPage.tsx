@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Landing() {
   const [hover, setHover] = useState(false)
   return (
-    <div id='landing' className='flex flex-col md:flex-row text-[#0094C6] p-10 px-32 h-screen'>
+    <div id='landing' className='flex flex-col md:flex-row text-[#0094C6] p-10 px-32 h-screen mb-20'>
       <div className='md:w-1/2 md:pr-10 content-center'>
         <h1 className="text-5xl whitespace-nowrap">
           Welcome to my digital portfolio

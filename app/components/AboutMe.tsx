@@ -14,7 +14,7 @@ export default function AboutMe() {
             <div className='hidden lg:block'>
                 <Separator orientation='vertical' className="bg-[#0094C6]" />
             </div>
-            <div className='text-[#0094C6] flex flex-col gap-6 lg:gap-8 text-center lg:text-left'>
+            <div className='text-[#0094C6] flex flex-col gap-6 lg:gap-8 text-center lg:text-left pt-8'>
                 <p>
                     I'm a passionate Frontend Developer from Bahía Blanca, Argentina. With 2 years of experience specializing in building dynamic, scalable, and visually appealing web applications.
                 </p>
