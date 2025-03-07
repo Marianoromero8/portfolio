@@ -1,7 +1,7 @@
 import { DiPostgresql, DiPython } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
-import { SiJavascript, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiCss3, SiJavascript, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { CgCPlusPlus } from "react-icons/cg";
 import { Separator } from "@/components/ui/separator";
 
@@ -11,11 +11,12 @@ const skills = [
     { id: 2, icon: <SiJavascript className="text-[#f7df1e]" />, name: "Javascript" },
     { id: 3, icon: <SiReact />, name: "React.js" },
     { id: 4, icon: <RiNextjsLine className="text-[#ffff]" />, name: "Next.js" },
-    { id: 5, icon: <SiTailwindcss className="text-[#06b6d4]" />, name: "Tailwind" },
-    { id: 6, icon: <DiPython />, name: "Python" },
+    { id: 5, icon: <SiCss3 className="text-[#dd7d29]" />, name: "CSS" },
+    { id: 6, icon: <SiTailwindcss className="text-[#06b6d4]" />, name: "Tailwind" },
     { id: 7, icon: <DiPostgresql />, name: "PostgreSQL" },
     { id: 8, icon: <FaNodeJs className="text-[#3C873A]" />, name: "Node.js" },
-    { id: 9, icon: <CgCPlusPlus />, name: "C++" },
+    { id: 9, icon: <DiPython />, name: "Python" },
+    { id: 10, icon: <CgCPlusPlus />, name: "C++" },
 ];
 
 export default function Skills() {
@@ -31,7 +32,7 @@ export default function Skills() {
             <div className='hidden lg:block'>
                 <Separator orientation="vertical" className="bg-[#0094C6]" />
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-3 justify-center text-3xl text-[#0094C6] gap-28 p-5">
+            <div className="grid grid-cols-3 md:grid-cols-3 justify-center text-3xl text-[#0094C6] gap-24 p-5">
                 {skills.map((sk) => (
                     <div
                         key={sk.id}
