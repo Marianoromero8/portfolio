@@ -17,7 +17,7 @@ export default function Landing() {
         <p>
           Hi, I’m <b>Romero Mariano</b>, a <b>Frontend Developer</b>. My mission is to turn ideas into captivating digital experiences through clean and efficient code.
           <br />
-          Explore my portfolio to see how I approach web development, create seamless user interfaces and bring creative solutions to life
+          Explore my portfolio to see how I approach web development, create seamless user interfaces and bring creative solutions to life.
         </p>
         <div
           onMouseEnter={() => setHover(true)}
