@@ -30,7 +30,7 @@ export default function AboutMe() {
                 <p>
                     I aim to not only contribute my skills but also grow and evolve within the company I join, taking on new challenges and responsibilities that allow me to continuously improve as a developer. My goal is to create seamless, engaging user experiences while staying up to date with the latest frontend trends and best practices.
                 </p>
-                <h2 className='flex justify-center lg:justify-start text-4xl hover:scale-110 transition duration-500'>
+                <h2 className='flex justify-center lg:justify-center text-4xl hover:scale-110 transition duration-500'>
                     <a href="mailto:marianoromero97.mr@gmail.com">
                         Let's work together! 💻
                     </a>
