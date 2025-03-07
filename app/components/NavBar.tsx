@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../common/Button'
 import TabTheme from '../common/TabTheme'
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTimes, FaBars } from "react-icons/fa";
 import { Separator } from '@/components/ui/separator';
 
 export default function NavBar() {
@@ -13,6 +13,7 @@ export default function NavBar() {
     }
     return "light";
   });
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -54,7 +55,16 @@ export default function NavBar() {
       <div className='flex justify-center w-48 p-2 font-semibold text-[#0094c6]'>
         {text}
       </div>
-      <div className='flex flex-row ml-3 pl-2 gap-14'>
+
+      {/* Botón de menú hamburguesa (visible solo en móviles) */}
+      <button
+        className="md:hidden text-[#0094c6] text-3xl p-2"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <div className='hidden md:flex flex-row ml-3 pl-2 xl:gap-14'>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('aboutme')} className='focus:underline'>About Me</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
@@ -65,7 +75,7 @@ export default function NavBar() {
         <Button variant='basic' onClick={() => scrollToSection('contacts')} className='focus:underline'>Contacts</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
       </div>
-      <div className='flex items-center gap-5 pl-20'>
+      <div className='hidden md:flex items-center gap-5 pl-20'>
         <a href="https://github.com/Marianoromero8" target='_blank' className='text-2xl' ><FaGithub /></a>
         <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target='_blank' className='text-2xl'><FaLinkedin /></a>
         <select onChange={handleDownload} className="px-3 py-2 rounded text-lg bg-transparent backdrop-blur-lg z-50 outline: transparent">
@@ -83,6 +93,32 @@ export default function NavBar() {
         </select>
       </div>
       <TabTheme />
+
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#000022] text-white flex flex-col items-center p-5 md:hidden z-50">
+          <Button variant="basic" onClick={() => scrollToSection("aboutme")} className="w-full py-2 border-b border-[#0094c6]">
+            About Me
+          </Button>
+          <Button variant="basic" onClick={() => scrollToSection("skills")} className="w-full py-2 border-b border-[#0094c6]">
+            Skills
+          </Button>
+          <Button variant="basic" onClick={() => scrollToSection("projects")} className="w-full py-2 border-b border-[#0094c6]">
+            Projects
+          </Button>
+          <Button variant="basic" onClick={() => scrollToSection("contacts")} className="w-full py-2 border-b border-[#0094c6]">
+            Contacts
+          </Button>
+          <div className="flex gap-5 mt-3">
+            <a href="https://github.com/Marianoromero8" target="_blank" className="text-2xl">
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target="_blank" className="text-2xl">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+      )}
     </div>
+
   )
 }
