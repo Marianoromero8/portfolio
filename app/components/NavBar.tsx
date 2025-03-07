@@ -72,7 +72,7 @@ export default function NavBar() {
         <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('projects')} className='focus:underline'>Projects</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
-        <Button variant='basic' onClick={() => scrollToSection('contacts')} className='focus:underline'>Contacts</Button>
+        <Button variant='basic' onClick={() => scrollToSection('contacts')} className='focus:underline'>Contact Me</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
       </div>
       <div className='hidden md:flex items-center gap-5 pl-20'>
