@@ -21,7 +21,7 @@ const skills = [
 
 export default function Skills() {
     return (
-        <div className="flex flex-row-reverse gap-14 mb-40 ml-3">
+        <div className="flex flex-col md:flex-row-reverse gap-14 mb-40 ml-3">
             <div id="skills" className="text-[#0094C6] flex flex-row lg:flex-col justify-center gap-1 lg:gap-4 scroll-mt-16">
                 {'Skills'.split('').map((letter, index) => (
                     <h2 key={index} className="text-3xl md:text-4xl lg:text-5xl text-center">
@@ -32,11 +32,11 @@ export default function Skills() {
             <div className='hidden lg:block'>
                 <Separator orientation="vertical" className="bg-[#0094C6]" />
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-3 justify-center text-3xl text-[#0094C6] gap-24 p-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 justify-center text-3xl text-[#0094C6] gap-16 md:gap-24 p-5">
                 {skills.map((sk) => (
                     <div
                         key={sk.id}
-                        className="flex flex-col p-2 justify-center border border-[#0094C6] rounded gap-2 hover:scale-125 transition duration-500"
+                        className="flex flex-col sm:grid-cols-1 p-2 justify-center gap-2 hover:scale-125 transition duration-500"
                     >
                         <h4 className="flex flex-col items-center gap-2">
                             {sk.icon} {sk.name}
