@@ -21,7 +21,7 @@ const skills = [
 
 export default function Skills() {
     return (
-        <div className="flex flex-col md:flex-row-reverse gap-14 mb-40 ml-3">
+        <div className="flex flex-col md:flex-row-reverse gap-14 mb-40 mx-3">
             <div id="skills" className="text-[#0094C6] flex flex-row lg:flex-col justify-center gap-1 lg:gap-4 scroll-mt-16">
                 {'Skills'.split('').map((letter, index) => (
                     <h2 key={index} className="text-3xl md:text-4xl lg:text-5xl text-center">

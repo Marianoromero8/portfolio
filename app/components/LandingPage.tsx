@@ -8,7 +8,7 @@ export default function Landing() {
   const [hover, setHover] = useState(false)
 
   return (
-    <div id='landing' className='flex flex-col-reverse md:flex-row gap-8 text-[#0094C6] p-10 px-6 md:px-32 h-screen mb-20'>
+    <div id='landing' className='flex flex-col-reverse md:flex-row gap-8 text-[#0094C6] py-6 px-6 md:py-10 md:px-32 h-full md:h-screen mb-20'>
       <div className='md:w-1/2 md:pr-10 flex flex-col justify-center text-center md:text-left'>
         <h1 className="text-3xl md:text-5xl">
           Welcome to my digital portfolio
