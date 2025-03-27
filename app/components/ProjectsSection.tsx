@@ -56,8 +56,8 @@ const ProjectsSection: React.FC = () => {
                     //     'PostgreSQL database for storing video game information',
                     //     'Search, filter, and sorting functionalities for video games',
                     // ]}
-                    imageUrl="/ssgdistribuidora.jpeg"  // Ajusta la ruta a tu carpeta de imágenes
-                    projectLink="https://ssg-distribuidora.vercel.app/"
+                    imageUrl="/ssgdistribuidoraPhoto.png"  // Ajusta la ruta a tu carpeta de imágenes
+                    projectLink="https://www.ssgdistribuidora.com.ar/"
                     codeLink="https://github.com/Marianoromero8/ssg-distribuidora.git"  // Cambia este enlace por el repositorio del código
                 />
             </div>
