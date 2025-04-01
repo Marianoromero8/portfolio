@@ -81,10 +81,10 @@ export default function NavBar() {
           <option value="" hidden>
             📥 Download Resume
           </option>
-          <option value="/CV-Romero Mariano-Desarrollador Frontend.pdf" className="bg-transparent backdrop-blur-lg z-50">
+          <option value="/CV - Romero Mariano - Frontend.pdf" className="bg-transparent backdrop-blur-lg z-50">
             📄Cv - Español
           </option>
-          <option value="/CV-Romero Mariano-Frontend Developer.pdf" className="bg-transparent backdrop-blur-lg z-50">
+          <option value="/Resume - Romero Mariano - Frontend.pdf" className="bg-transparent backdrop-blur-lg z-50">
             📄Resume - English
           </option>
         </select>

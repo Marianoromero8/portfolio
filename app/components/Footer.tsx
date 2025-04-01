@@ -27,9 +27,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="text-sm flex flex-row gap-2 font-semibold">
-                    <a href="/CV-Romero Mariano-Desarrollador Frontend.pdf" download="CV - Mariano Romero" className="hover:underline">CV</a>
+                    <a href="/CV - Romero Mariano - Frontend.pdf" download="CV - Mariano Romero" className="hover:underline">CV</a>
                     <p>-</p>
-                    <a href="/CV-Romero Mariano-Frontend Developer.pdf" download="Resume - Mariano Romero" className="hover:underline">Resume</a>
+                    <a href="/Resume - Romero Mariano - Frontend.pdf" download="Resume - Mariano Romero" className="hover:underline">Resume</a>
                 </div>
             </div>
         </footer>
