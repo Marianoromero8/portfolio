@@ -52,31 +52,28 @@ export default function NavBar() {
 
   return (
     <div className='fixed text-[#0094c6] flex w-full p-2 border-b border-[#0094c6] backdrop-blur-lg z-50 justify-between'>
-      <div className='flex justify-center items-center w-44 p-2 font-semibold text-[#0094c6] whitespace-nowrap'>
-        {text}
+      <div className='flex justify-center items-center min-w-[176px] p-2 font-semibold text-[#0094c6] whitespace-nowrap'>
+        <p>
+          {text}
+        </p>
       </div>
 
-      {/* Botón de menú hamburguesa (visible solo en móviles) */}
-      <button
-        className="md:hidden text-[#0094c6] text-3xl p-2"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </button>
-
-      <div className='hidden md:flex flex-row ml-3 pl-2 lg:gap-10 whitespace-nowrap'>
+      <div className='hidden md:flex'>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
+      </div>
+
+      <div className='hidden md:flex flex-row lg:gap-10 whitespace-nowrap'>
         <Button variant='basic' onClick={() => scrollToSection('aboutme')} className='focus:underline'>About Me</Button>
-        <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('skills')} className='focus:underline'>Skills</Button>
-        <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('works')} className='focus:underline'>Works</Button>
-        <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('projects')} className='focus:underline'>Projects</Button>
-        <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('contacts')} className='focus:underline'>Contact Me</Button>
+      </div>
+
+      <div className='hidden md:flex'>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
       </div>
+
       <div className='hidden md:flex items-center gap-5 pl-5'>
         <a href="https://github.com/Marianoromero8" target='_blank' className='text-2xl' ><FaGithub /></a>
         <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target='_blank' className='text-2xl'><FaLinkedin /></a>
@@ -93,6 +90,14 @@ export default function NavBar() {
         </select>
       </div>
       <TabTheme />
+
+      {/* Botón de menú hamburguesa (visible solo en móviles) */}
+      <button
+        className="md:hidden text-[#0094c6] text-3xl p-2"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
 
       {isOpen && (
         <div className="md:hidden absolute top-12 left-0 w-full flex flex-col items-center p-5 bg-[#E0CFB9] dark:bg-[#000022] backdrop-blur-lg z-50">
