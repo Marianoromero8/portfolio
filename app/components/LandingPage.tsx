@@ -11,11 +11,11 @@ export default function Landing() {
     <div id='landing' className='flex flex-col-reverse md:flex-row gap-8 text-[#0094C6] py-6 px-6 md:py-10 md:px-32 h-full md:h-screen mb-20'>
       <div className='md:w-1/2 md:pr-10 flex flex-col justify-center text-center md:text-left'>
         <h1 className="text-3xl md:text-5xl">
-          Welcome to my digital portfolio
+          Hi, I'm Romero Mariano
         </h1>
         <br />
         <p>
-          Hi, I’m <b>Romero Mariano</b>, a <b>Front-end Developer</b>. My mission is to turn ideas into captivating digital experiences through clean and efficient code.
+          Welcome to my digital portfolio! I´m a <b>Front-end Developer</b> passionate about transforming ideas into engaging digital experiences through clean and efficient code.
           <br />
           Explore my portfolio to see how I approach web development, create seamless user interfaces and bring creative solutions to life.
         </p>

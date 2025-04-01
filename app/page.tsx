@@ -4,6 +4,7 @@ import AboutMe from "./components/AboutMe";
 import ProjectsSection from "./components/ProjectsSection";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer"
+import Works from "./components/Works";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Landing />
       <AboutMe />
       <Skills />
+      <Works />
       <ProjectsSection />
       <Footer />
     </main>
