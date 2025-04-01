@@ -27,7 +27,7 @@ export default function NavBar() {
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prevState) =>
-        prevState === "Mariano Romero" ? "Front-end Developer" : "Mariano Romero"
+        prevState === "Mariano Romero" ? "Frontend Developer" : "Mariano Romero"
       );
     }, 4000);
 
@@ -52,7 +52,7 @@ export default function NavBar() {
 
   return (
     <div className='fixed text-[#0094c6] flex w-full p-2 border-b border-[#0094c6] backdrop-blur-lg z-50 justify-between'>
-      <div className='flex justify-center w-48 p-2 font-semibold text-[#0094c6]'>
+      <div className='flex justify-center items-center w-44 p-2 font-semibold text-[#0094c6] whitespace-nowrap'>
         {text}
       </div>
 
@@ -64,18 +64,20 @@ export default function NavBar() {
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      <div className='hidden md:flex flex-row ml-3 pl-2 lg:gap-14'>
+      <div className='hidden md:flex flex-row ml-3 pl-2 lg:gap-10 whitespace-nowrap'>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('aboutme')} className='focus:underline'>About Me</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('skills')} className='focus:underline'>Skills</Button>
+        <Separator orientation='vertical' className='bg-[#0094c6]' />
+        <Button variant='basic' onClick={() => scrollToSection('works')} className='focus:underline'>Works</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('projects')} className='focus:underline'>Projects</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
         <Button variant='basic' onClick={() => scrollToSection('contacts')} className='focus:underline'>Contact Me</Button>
         <Separator orientation='vertical' className='bg-[#0094c6]' />
       </div>
-      <div className='hidden md:flex items-center gap-5 pl-20'>
+      <div className='hidden md:flex items-center gap-5 pl-5'>
         <a href="https://github.com/Marianoromero8" target='_blank' className='text-2xl' ><FaGithub /></a>
         <a href="https://www.linkedin.com/in/mariano-romero-489104272/" target='_blank' className='text-2xl'><FaLinkedin /></a>
         <select onChange={handleDownload} className="px-3 py-2 rounded text-lg bg-transparent backdrop-blur-lg z-50 outline: transparent">
@@ -99,6 +101,9 @@ export default function NavBar() {
           </Button>
           <Button variant="basic" onClick={() => scrollToSection("skills")} className="w-full py-2">
             Skills
+          </Button>
+          <Button variant="basic" onClick={() => scrollToSection("works")} className="w-full py-2">
+            Works
           </Button>
           <Button variant="basic" onClick={() => scrollToSection("projects")} className="w-full py-2">
             Projects

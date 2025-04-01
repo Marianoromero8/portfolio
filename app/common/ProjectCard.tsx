@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl, projectLink, codeLink }) => {
     return (
-        <div className="bg-transparent border border-[#0094c6] shadow-md rounded-lg overflow-hidden">
+        <div className="bg-transparent border border-[#0094c6] shadow-md rounded-lg overflow-hidden h-fit">
             <img src={imageUrl} alt={title} className="w-full h-auto object-contain" />
             <div className="flex flex-col p-4">
                 <div className='flex flex-col flex-grow'>

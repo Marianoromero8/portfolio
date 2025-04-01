@@ -16,7 +16,7 @@ export default function AboutMe() {
             </div>
             <div className='text-[#0094C6] flex flex-col gap-6 lg:gap-8 text-center lg:text-left pt-8'>
                 <p className="text-sm sm:text-base">
-                    I'm a passionate Frontend Developer from Bahía Blanca, Argentina. With 2 years of experience specializing in building dynamic, scalable, and visually appealing web applications.
+                    I'm a passionate Frontend Developer from Bahía Blanca, Argentina, currently in my final year of a two-year University Degree in Programming at UTN, with 2 years of experience specializing in building dynamic, scalable, and visually appealing web applications.
                 </p>
                 <p className="text-sm sm:text-base">
                     My expertise includes React.js, Next.js, TypeScript, Redux Toolkit, JavaScript, Firebase, and Stripe, among other technologies. I primarily use Tailwind CSS for styling, ensuring efficient and maintainable UI development.
