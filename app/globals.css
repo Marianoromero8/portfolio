@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -19,7 +17,7 @@
 }
 
 body {
-  background-color: #E0CFB9;
+  background-color: #e0cfb9;
   /* background-color: #000022; */
   /* background-color: #0094C6; */
 }
@@ -114,4 +112,13 @@ body {
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
