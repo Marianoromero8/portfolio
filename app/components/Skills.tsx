@@ -104,20 +104,17 @@ export default function Skills() {
         className="bg-[#0094C6] w-3/4 mb-10"
       />
 
-      {/* Carrusel infinito */}
-      <div className="relative w-full max-w-[90vw] overflow-hidden">
-        <div className="flex animate-infinite-scroll gap-16 whitespace-nowrap px-4">
-          {/* Duplicamos el contenido para crear el loop */}
-          {[...skills, ...skills].map((skill, index) => (
-            <div
-              key={index}
-              className="text-[50px] text-[#0094C6] p-5 flex-shrink-0 hover:scale-125 transition-transform duration-300"
-              title={skill.name}
-            >
-              {skill.icon}
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-10 place-items-center">
+        {/* Duplicamos el contenido para crear el loop */}
+        {[...skills].map((skill, index) => (
+          <div
+            key={index}
+            className="text-[50px] text-[#0094C6] p-5 flex-shrink-0 hover:scale-125 transition-transform duration-300"
+            title={skill.name}
+          >
+            {skill.icon}
+          </div>
+        ))}
       </div>
     </div>
   );
