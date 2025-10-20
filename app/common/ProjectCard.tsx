@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="flex flex-col p-4">
         <div className="flex flex-col flex-grow">
           <h3 className="text-xl font-bold">{title}</h3>
-          <p className="text-[#0094c6] opacity-80 flex-grow h-44">
+          <p className="text-[#0094c6] opacity-80 flex-grow h-auto xl:h-44">
             {description}
           </p>
           <div className="flex flex-row gap-4 pt-6 mt-auto">
