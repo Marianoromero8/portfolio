@@ -34,7 +34,9 @@ export default function NavBar() {
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prevState) =>
-        prevState === "Mariano Romero" ? "Software Developer" : "Mariano Romero"
+        prevState === "Mariano Romero"
+          ? "Software Developer"
+          : "Mariano Romero",
       );
     }, 4000);
 
