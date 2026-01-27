@@ -36,7 +36,7 @@ const ProjectsSection: React.FC = () => {
           title="VideoGames API"
           description="A web app that fetches data from an external video game API and displays it. Built using technologies learned in the bootcamp, including Node.js, PostgreSQL, JavaScript, React, and Redux."
           imageUrl="/PI-Videogames.jpeg" // Ajusta la ruta a tu carpeta de imágenes
-          codeLink="https://github.com/Marianoromero8/Proyecto-Individual-Videogames" // Cambia este enlace por el repositorio del código
+          codeLink="https://github.com/Marianoromero8/frontend-proyecto-individual" // Cambia este enlace por el repositorio del código
         />
       </div>
     </div>
