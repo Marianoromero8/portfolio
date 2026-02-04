@@ -206,7 +206,7 @@ export default function NavBar() {
                 📄Cv - Español
               </option>
               <option
-                value="/CV-Romero Mariano-Frontend Developer.pdf"
+                value="/Resume_Romero_Mariano_Software_Dev.pdf"
                 className="px-3 py-2 rounded text-lg"
               >
                 📄Resume - English
