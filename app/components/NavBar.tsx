@@ -120,7 +120,7 @@ export default function NavBar() {
           <FaLinkedin />
         </a>
         <a
-          href="/Resume - Romero Mariano.pdf"
+          href="/Resume_Romero_Mariano_Software_Dev.pdf"
           target="_blank"
           // download="Resume - Romero Mariano.pdf"
           className="text-2xl"
@@ -191,27 +191,15 @@ export default function NavBar() {
               >
                 <FaLinkedin />
               </a>
+              <a
+                href="/Resume_Romero_Mariano_Software_Dev.pdf"
+                target="_blank"
+                // download="Resume - Romero Mariano.pdf"
+                className="text-2xl"
+              >
+                <FaFilePdf />
+              </a>
             </div>
-            <select
-              onChange={handleDownload}
-              className="px-3 py-2 rounded text-lg bg-transparent"
-            >
-              <option value="" hidden>
-                📥 Download Resume
-              </option>
-              <option
-                value="/CV-Romero Mariano-Desarrollador Frontend.pdf"
-                className="px-3 py-2 rounded text-lg"
-              >
-                📄Cv - Español
-              </option>
-              <option
-                value="/Resume_Romero_Mariano_Software_Dev.pdf"
-                className="px-3 py-2 rounded text-lg"
-              >
-                📄Resume - English
-              </option>
-            </select>
           </div>
         </div>
       )}
