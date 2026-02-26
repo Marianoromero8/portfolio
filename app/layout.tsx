@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "./context/context";
+import NavBar from "./components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                     (function() {
                         const theme = localStorage.getItem('theme') || 'light';
                         if (theme === 'dark') {
@@ -27,10 +30,16 @@ export default function RootLayout({
                             document.documentElement.classList.remove('dark');
                         }
                     })();
-                    `
-        }} />
+                    `,
+          }}
+        />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LanguageProvider>
+          <NavBar />
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
