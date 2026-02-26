@@ -13,7 +13,7 @@ export default function Landing() {
       id="landing"
       className="flex flex-col-reverse md:flex-row items-center gap-8 text-[#0094C6] py-6 px-6 md:py-10 md:px-32 h-full md:h-screen mb-20"
     >
-      <div className="flex-1 w-full flex flex-col justify-center text-center">
+      <div className="w-full flex flex-col justify-center text-center">
         <h1 className="text-3xl md:text-5xl md:mt-20 max-w-xl mx-auto font-bold leading-tight whitespace-nowrap">
           {t("Hola, Soy Romero Mariano", "Hi, I'm Romero Mariano")}
         </h1>
@@ -56,7 +56,7 @@ export default function Landing() {
           width={300}
           height={300}
           priority
-          className="object-contain max-w-[200px] md:max-w-[300px] lg:max-w-[550px] h-auto rounded-full w-[550px]"
+          className="object-contain rounded-full h-auto w-full max-w-[250px] md:max-w-[300px] lg:max-w-[400px]"
         />
       </div>
     </div>
