@@ -33,26 +33,6 @@ const ProjectsSection: React.FC = () => {
         />
 
         <ProjectCard
-          title="ChampionGear"
-          description={t(
-            "Un e-commerce de ropa deportiva con autenticación de terceros mediante Firebase, Stripe integrado para procesamiento de pagos y Redux Toolkit para la gestión del estado global.",
-            "An e-commerce for sports clothing with third-party authentication using Firebase, integrated Stripe for payment processing and Redux Toolkit for state management.",
-          )}
-          imageUrl="/ChampionGear.jpeg"
-          codeLink="https://github.com/Marianoromero8/ProyectoFinal.git"
-        />
-
-        <ProjectCard
-          title="VideoGames API"
-          description={t(
-            "Una aplicación web que consume datos de una API externa de videojuegos. Construida utilizando Node.js, PostgreSQL, JavaScript, React y Redux.",
-            "A web app that fetches data from an external video game API and displays it. Built using Node.js, PostgreSQL, JavaScript, React, and Redux.",
-          )}
-          imageUrl="/PI-Videogames.jpeg"
-          codeLink="https://github.com/Marianoromero8/frontend-proyecto-individual"
-        />
-
-        <ProjectCard
           title={t("Proyecto Final - UTN", "Final Project - UTN")}
           description={t(
             "Arquitectura Full-Stack que cuenta con gestión de estado global, carrito de compras dinámico y un panel de administración para la gestión de productos y pedidos. Proyecto final de la Tecnicatura Universitaria en Programación en la UTN.",
