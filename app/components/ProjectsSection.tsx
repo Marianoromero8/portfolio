@@ -47,7 +47,7 @@ const ProjectsSection: React.FC = () => {
           title={t("Blackout Landing Page", "Blackout Landing Page")}
           description={t(
             "Landing page moderna y responsive desarrollada para un emprendimiento local, enfocada en mejorar la presencia digital, experiencia de usuario y conversión de clientes. Implementada con React y TypeScript, con diseño optimizado y despliegue en Vercel.",
-            "Modern and responsive landing page developed for a local business, focused on improving digital presence, user experience, and customer conversion. Built with React and TypeScript, featuring an optimized design and deployment on Vercel.",
+            "Modern and responsive landing page developed for a local business, focused on improving digital presence, user experience and customer conversion. Built with React and TypeScript, featuring an optimized design and deployment on Vercel.",
           )}
           imageUrl="/tienda-blackout.png"
           projectLink="https://www.tiendablackout.com.ar/"
