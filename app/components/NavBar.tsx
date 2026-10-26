@@ -12,7 +12,7 @@ import {
 import { useLanguage } from "@/app/context/context";
 export default function NavBar() {
   const { language, toggleLanguage, t } = useLanguage();
-  const [showRole, setShowRole] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") || "light";
@@ -32,7 +32,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setShowRole((prev) => !prev);
+      setRoleIndex((prev) => (prev + 1) % 3);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -42,6 +42,7 @@ export default function NavBar() {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
     } else {
       console.error(`Element with id "${sectionId}" not found.`);
     }
@@ -51,13 +52,31 @@ export default function NavBar() {
     <div className="fixed text-[#0094c6] flex w-full p-2 backdrop-blur-lg z-50 justify-between">
       <div className="flex justify-center items-center w-[220px] md:w-[250px] p-2 font-semibold text-[#0094c6] whitespace-nowrap">
         <p>
-          {showRole
-            ? t("Desarrollador Full Stack", "Full Stack Developer")
-            : "Mariano Romero"}
+          {
+            [
+              "Mariano Romero",
+              t("Técnico en Programación", "Programming Graduate · UTN"),
+              t("Desarrollador Full Stack", "Full Stack Developer"),
+            ][roleIndex]
+          }
         </p>
       </div>
 
-      <div className="hidden md:flex flex-row lg:gap-10 whitespace-nowrap">
+      <div className="hidden lg:flex flex-row lg:gap-4 xl:gap-10 whitespace-nowrap">
+        <Button
+          variant="basic"
+          onClick={() => scrollToSection("projects")}
+          className="focus:underline"
+        >
+          {t("Proyectos", "Projects")}
+        </Button>
+        <Button
+          variant="basic"
+          onClick={() => scrollToSection("experience")}
+          className="focus:underline"
+        >
+          {t("Experiencia", "Experience")}
+        </Button>
         <Button
           variant="basic"
           onClick={() => scrollToSection("aboutme")}
@@ -74,13 +93,6 @@ export default function NavBar() {
         </Button>
         <Button
           variant="basic"
-          onClick={() => scrollToSection("projects")}
-          className="focus:underline"
-        >
-          {t("Proyectos", "Projects")}
-        </Button>
-        <Button
-          variant="basic"
           onClick={() => scrollToSection("contacts")}
           className="focus:underline"
         >
@@ -88,7 +100,7 @@ export default function NavBar() {
         </Button>
       </div>
 
-      <div className="hidden md:flex items-center gap-5 pl-5">
+      <div className="hidden lg:flex items-center gap-5 pl-5">
         <a
           href="https://github.com/Marianoromero8"
           target="_blank"
@@ -129,14 +141,28 @@ export default function NavBar() {
 
       {/* Botón de menú hamburguesa (visible solo en móviles) */}
       <button
-        className="md:hidden text-[#0094c6] text-3xl p-2"
+        className="lg:hidden text-[#0094c6] text-3xl p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
       {isOpen && (
-        <div className="md:hidden absolute top-12 left-0 w-full flex flex-col items-center p-5 bg-[#E0CFB9] dark:bg-[#000022] backdrop-blur-lg z-50">
+        <div className="lg:hidden absolute top-12 left-0 w-full flex flex-col items-center p-5 bg-[#E0CFB9] dark:bg-[#000022] backdrop-blur-lg z-50">
+          <Button
+            variant="basic"
+            onClick={() => scrollToSection("projects")}
+            className="w-full py-2"
+          >
+            {t("Proyectos", "Projects")}
+          </Button>
+          <Button
+            variant="basic"
+            onClick={() => scrollToSection("experience")}
+            className="w-full py-2"
+          >
+            {t("Experiencia", "Experience")}
+          </Button>
           <Button
             variant="basic"
             onClick={() => scrollToSection("aboutme")}
@@ -150,13 +176,6 @@ export default function NavBar() {
             className="w-full py-2"
           >
             {t("Habilidades", "Skills")}
-          </Button>
-          <Button
-            variant="basic"
-            onClick={() => scrollToSection("projects")}
-            className="w-full py-2"
-          >
-            {t("Proyectos", "Projects")}
           </Button>
           <Button
             variant="basic"
@@ -182,7 +201,10 @@ export default function NavBar() {
                 <FaLinkedin />
               </a>
               <a
-                href="/Resume_Romero_Mariano_Software_Dev.pdf"
+                href={t(
+                  "/CV_Mariano_Romero_Programador.pdf",
+                  "/Resume_Romero_Mariano_Software_Dev.pdf",
+                )}
                 target="_blank"
                 className="text-2xl"
               >

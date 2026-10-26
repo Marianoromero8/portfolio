@@ -1,15 +1,12 @@
 "use client";
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
+import { useLanguage } from "../context/context";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
-    <footer
-      id="contacts"
-      className="bg-[#0094c6] text-[#000022] py-6 text-center w-full"
-    >
+    <footer className="bg-[#0094c6] text-[#000022] py-6 text-center w-full">
       <div className="container mx-auto flex flex-col items-center gap-4">
-        <p className="text-lg font-semibold">© 2025 Mariano Romero</p>
-
         <div className="flex gap-6">
           <a
             href="https://github.com/Marianoromero8"
@@ -29,18 +26,18 @@ export default function Footer() {
             <FaEnvelope className="text-2xl hover:text-gray-600 transition-colors" />
           </a>
           <a
-            href="/Resume - Romero Mariano.pdf"
-            download="Resume - Romero Mariano"
+            href={t(
+              "/CV_Mariano_Romero_Programador.pdf",
+              "/Resume_Romero_Mariano_Software_Dev.pdf",
+            )}
+            target="_blank"
           >
             <FaFilePdf className="text-2xl hover:text-gray-600 transition-colors" />
           </a>
         </div>
-        <div className="flex flex-col font-semibold">
-          <div className="flex flex-row gap-2 justify-center">
-            <label htmlFor="">Email:</label>
-            <p>marianoromero97.mr@gmail.com</p>
-          </div>
-        </div>
+        <p className="text-sm font-semibold">
+          © {new Date().getFullYear()} Mariano Romero
+        </p>
       </div>
     </footer>
   );

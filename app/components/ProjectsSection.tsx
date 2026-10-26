@@ -6,9 +6,10 @@ import { useLanguage } from "@/app/context/context";
 
 const ProjectsSection: React.FC = () => {
   const { t } = useLanguage();
+  const client = t("Cliente real", "Client project");
 
   return (
-    <div className="flex flex-col lg:flex-col mb-40 gap-10 md:gap-14 mx-5 md:mx-16 lg:mx-32">
+    <div className="flex flex-col lg:flex-col mb-24 gap-10 md:gap-14 mx-5 md:mx-16 lg:mx-32">
       <div
         id="projects"
         className="text-[#0094C6] flex flex-col lg:flex-col justify-center gap-1 lg:gap-4 scroll-mt-16"
@@ -22,36 +23,55 @@ const ProjectsSection: React.FC = () => {
       </div>
       <div className="text-[#0094C6] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-3 md:p-5 xl:pt-8">
         <ProjectCard
-          title="SSG Distribuidora"
+          title="Punto Fiesta"
+          badge={client}
           description={t(
-            "Una aplicación web desarrollada con Next.js, TypeScript y Tailwind CSS, diseñada para una distribuidora local. El objetivo es mostrar los productos de manera eficiente, con una interfaz moderna y fácil de navegar, brindando una experiencia de usuario optimizada y responsive.",
-            "A web application developed with Next.js, TypeScript, and Tailwind CSS, designed for a local distributor. The goal is to display the products they sell efficiently, with a modern, easy-to-navigate interface, providing an optimized and responsive user experience.",
+            "E-commerce con panel de administración de pedidos y notificaciones automáticas por WhatsApp al confirmar cada compra.",
+            "E-commerce with an order management dashboard and automatic WhatsApp notifications when each purchase is confirmed.",
           )}
+          tags={["Next.js", "TypeScript", "Zustand", "Express", "PostgreSQL"]}
+          imageUrl="/punto-fiesta.png"
+          projectLink="https://www.puntofiestabahia.com/"
+          codeLink="https://github.com/Marianoromero8/puntofiesta"
+        />
+
+        <ProjectCard
+          title="SSG Distribuidora"
+          badge={client}
+          description={t(
+            "Catálogo digital para una distribuidora local, con carga inmediata y sin costos de servidor gracias a datos estáticos.",
+            "Digital catalog for a local distributor, loading instantly with no server costs thanks to static data.",
+          )}
+          tags={["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"]}
           imageUrl="/ssgdistribuidoraPhoto.png"
           projectLink="https://www.ssgdistribuidora.com.ar/"
           codeLink="https://github.com/Marianoromero8/ssg-distribuidora.git"
         />
 
         <ProjectCard
-          title={t("Proyecto Final - UTN", "Final Project - UTN")}
+          title="Blackout Landing Page"
+          badge={client}
           description={t(
-            "Arquitectura Full-Stack que cuenta con gestión de estado global, carrito de compras dinámico y un panel de administración para la gestión de productos y pedidos. Proyecto final de la Tecnicatura Universitaria en Programación en la UTN.",
-            "Full-Stack architecture featuring global state management, a dynamic shopping cart, and an admin dashboard for product and order management. Capstone project for the Computer Programming degree at UTN.",
+            "Landing page responsive para un emprendimiento local, pensada para mejorar su presencia digital y atraer clientes.",
+            "Responsive landing page for a local business, designed to boost its digital presence and attract customers.",
           )}
-          imageUrl="/PI-UTN.png"
-          projectLink="https://frontend-suplementos-one.vercel.app/"
-          codeLink="https://github.com/Marianoromero8/frontend-suplementos.git"
-        />
-
-        <ProjectCard
-          title={t("Blackout Landing Page", "Blackout Landing Page")}
-          description={t(
-            "Landing page moderna y responsive desarrollada para un emprendimiento local, enfocada en mejorar la presencia digital, experiencia de usuario y conversión de clientes. Implementada con React y TypeScript, con diseño optimizado y despliegue en Vercel.",
-            "Modern and responsive landing page developed for a local business, focused on improving digital presence, user experience and customer conversion. Built with React and TypeScript, featuring an optimized design and deployment on Vercel.",
-          )}
+          tags={["React", "TypeScript", "Vercel"]}
           imageUrl="/tienda-blackout.png"
           projectLink="https://www.tiendablackout.com.ar/"
           codeLink="https://github.com/Marianoromero8/blackout-landing"
+        />
+
+        <ProjectCard
+          title={t("Proyecto Final - UTN", "Final Project - UTN")}
+          badge={t("Académico", "Academic")}
+          description={t(
+            "E-commerce de suplementos con carrito dinámico, estado global y panel de administración. Proyecto final de la Tecnicatura en Programación.",
+            "Supplements e-commerce with a dynamic cart, global state and admin dashboard. Capstone project for the Programming degree.",
+          )}
+          tags={["React", "TypeScript", "Tailwind CSS", "React Router", "Zod"]}
+          imageUrl="/PI-UTN.png"
+          projectLink="https://frontend-suplementos-one.vercel.app/"
+          codeLink="https://github.com/Marianoromero8/frontend-suplementos.git"
         />
       </div>
     </div>

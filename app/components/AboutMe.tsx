@@ -3,9 +3,9 @@ import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "../context/context";
 
 export default function AboutMe() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
-    <div className="flex flex-col lg:flex-col mb-20 lg:mb-40 gap-8 lg:gap-14 mx-auto w-[90%] lg:w-[80%]">
+    <div className="flex flex-col lg:flex-col mb-20 lg:mb-24 gap-8 lg:gap-14 mx-auto w-[90%] lg:w-[80%]">
       <div
         id="aboutme"
         className="text-[#0094C6] flex flex-col lg:flex-col justify-center gap-1 lg:gap-4 scroll-mt-16 text-center lg:text-left"
@@ -19,9 +19,27 @@ export default function AboutMe() {
       </div>
       <div className="text-[#0094C6] flex flex-col gap-6 lg:gap-8 text-left lg:text-left pt-8">
         <p className="text-lg leading-relaxed">
-          {t(
-            "Soy Mariano Romero, Programador Universitario graduado de la UTN (Bahía Blanca, Argentina) y Desarrollador Full Stack. Me apasiona crear aplicaciones web utilizando JavaScript, TypeScript, React, Next.js y Node.js.",
-            "I am Mariano Romero, a Computer Programmer graduated from UTN (Bahía Blanca, Argentina) and a Full Stack Developer. I love building web apps using JavaScript, TypeScript, React, Next.js and Node.js.",
+          {language === "es" ? (
+            <>
+              Soy Mariano Romero,{" "}
+              <strong className="font-bold">
+                Técnico Universitario en Programación
+              </strong>{" "}
+              graduado de la UTN (Bahía Blanca, Argentina) y Desarrollador Full
+              Stack. Me apasiona crear aplicaciones web utilizando JavaScript,
+              TypeScript, React, Next.js y Node.js.
+            </>
+          ) : (
+            <>
+              I’m Mariano Romero, a graduate of UTN (Bahía Blanca, Argentina)
+              with an{" "}
+              <strong className="font-bold">
+                Associate Degree in Programming
+              </strong>{" "}
+              and a Full Stack Developer. I’m passionate about building web
+              applications using JavaScript, TypeScript, React, Next.js and
+              Node.js.
+            </>
           )}
         </p>
 
@@ -39,7 +57,7 @@ export default function AboutMe() {
           )}
         </p>
         <h2 className="flex justify-center text-2xl sm:text-3xl hover:scale-110 transition duration-500">
-          <a href="mailto:marianoromero97.mr@gmail.com">
+          <a href="#contacts">
             {t("¡Trabajemos Juntos! 💻", "Let's work together! 💻")}
           </a>
         </h2>
